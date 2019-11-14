@@ -1,20 +1,15 @@
-.navbar-brand{
-  color: white;
+#align{
+  justify-content: space-between
+  margin-left: 40px;
 }
 
-ul.nav li a, ul.nav li a:visited {
-    color: white;
+.nav-item{
+  float: center;
+  justify-content: space-between;
+  margin-left: 20px;
 }
 
-ul.nav li a:hover, ul.nav li a:active{
-    color: black;
-}
-
-ul.nav li.active a {
-    color: green;
-}
-
-.logo{
-  height: 50%
-  width: 50%
+#logo{
+  height: 2%;
+  width: 2%;
 }
