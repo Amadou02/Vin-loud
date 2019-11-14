@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+/* Modal du Panier */
 .fa-shopping-basket{
   font-size: 25px;
 }
@@ -15,3 +20,43 @@
 .modal-icon-trash:hover{
   color: #CF3A24;
 }
+/* Fin de modal */
+
+/* Debut du footer */
+footer{
+  background: #33353e;
+  color: white;
+  height: 150px;
+}
+footer .container-legal-notice{
+  padding-top: 2%;
+}
+.language-container{
+  padding-left: 20px;
+}
+.follow-post{
+  padding-bottom: 7px;
+  font-size: 23px;
+}
+.copyright{
+  padding-right: 20px;
+}
+.icon{
+  color: white;
+  font-size: 40px;
+  padding:0 9px;
+}
+.icon:hover{
+  opacity: 0.7;
+}
+.legal-notice{
+  padding:0 7px;
+  color: white;
+}
+.legal-notice:hover{
+  color: #b9b9b9;
+}
+.modal{
+  color: black;
+}
+/* fin du footer */
