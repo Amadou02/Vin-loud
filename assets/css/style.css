@@ -1,15 +1,37 @@
-#align{
-  justify-content: space-between
-  margin-left: 40px;
+/* marge liste de liens*/
+
+#navbarSupportedContent{
+margin-left: 110px;
+}
+
+/* LOGO */
+
+#logo{
+  height: 40px;
+  width: 50px;
+}
+
+/* Nom du site */
+
+#name{
+  margin-left: 4vw;
+  margin-right: 3vw;
+}
+
+/* espace entre les liens*/
+
+li{
+  justify-content: space-between;
+  padding-right: 30px;
 }
 
 .nav-item{
-  float: center;
-  justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 1.5vw;
 }
 
-#logo{
-  height: 2%;
-  width: 2%;
+/* effets sur les liens */
+
+.nav-link:hover{
+  background-color: #828a91;
+  text-decoration-color: white;
 }
