@@ -1,0 +1,20 @@
+.navbar-brand{
+  color: white;
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: white;
+}
+
+ul.nav li a:hover, ul.nav li a:active{
+    color: black;
+}
+
+ul.nav li.active a {
+    color: green;
+}
+
+.logo{
+  height: 50%
+  width: 50%
+}
