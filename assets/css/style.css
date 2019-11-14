@@ -1,0 +1,17 @@
+.fa-shopping-basket{
+  font-size: 25px;
+}
+.modal-price{
+  color: grey;
+  font-size: 14px;
+  float: right;
+}
+.modal-total-basket{
+  font-size: 15px;
+}
+.modal-icon-trash{
+  color: black;
+}
+.modal-icon-trash:hover{
+  color: #CF3A24;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CDN bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Vin-loud</title>
+</head>
+<body>
+  <!--start header-->
+  <header>
+    <button class="btn btn-dark" data-toggle="modal" data-target="#shopping-basket"><i class="fas fa-shopping-basket"></i></button>
+
+    <!-- Le panier en modal -->
+    <div class="modal fade" id="shopping-basket" tabindex="-1" role="dialog" aria-labelledby="shopping-basketTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container-fluid">
+              <h5 class="modal-title" id="exampleModalLongTitle">Votre panier</h5>
+              <span class="modal-price">Prix</span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+
+              Les articles
+
+            </div>
+            <div class="modal-trash d-flex justify-content-end">
+              <a href="#" ><i class="modal-icon-trash far fa-trash-alt"> Supprimer</i></a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="container-fluid">
+              <div class="modal-total-basket d-flex justify-content-end">
+                <p>Sous total ( <!-- afficher le nombre d'articles --><span id="modal-quantity"></span> article) : <span id="modal-total"></span></p>
+              </div>
+              <div class="modal-purchase d-flex justify-content-around">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Continuer mes achats</button>
+                <button type="button" class="btn btn-outline-success" id="modal-purchase">Commander</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!--start article -->
+  <main>
+  </main>
+  <!--end article-->
+
+  <!--start footer-->
+  <footer>
+  </footer>
+  <!-- end footer -->
+  <!-- CDN jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <!-- CDN js bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- CDN font-fontawesome pour les icones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
