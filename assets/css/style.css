@@ -1,11 +1,35 @@
-<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
 }
+/* début du header */
+nav{
+  background: #33353e;
+}
+#logo{
+  height: 40px;
+  width: 50px;
+}
+.nav-link:hover{
+  background-color: #828a91;
+  text-decoration-color: white;
+}
+.nav-item{
+  padding:0 30px;
+}
+.navbar-brand{
+  margin-left: 4vw;
+  margin-right: 3vw;
+  color: white;
+}
 /* Modal du Panier */
 .fa-shopping-basket{
-  font-size: 25px;
+  background: #33353e;
+  font-size: 20px;
+  color: white;
+}
+.fa-shopping-basket:hover{
+  opacity: 0.8;
 }
 .modal-price{
   color: grey;
@@ -22,21 +46,17 @@ body{
   color: #CF3A24;
 }
 /* Fin de modal */
-
+/* fin du header */
 /* Debut du footer */
 footer{
   background: #33353e;
   color: white;
-  height: 150px;
-}
-footer .container-legal-notice{
-  padding-top: 2%;
+  height: 200px;
 }
 .language-container{
   padding-left: 20px;
 }
 .follow-post{
-  padding-bottom: 7px;
   font-size: 23px;
 }
 .copyright{
@@ -46,9 +66,11 @@ footer .container-legal-notice{
   color: white;
   font-size: 40px;
   padding:0 9px;
+  margin-bottom: 3%;
+  padding-top: 5px;
 }
 .icon:hover{
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .legal-notice{
   padding:0 7px;
@@ -60,44 +82,19 @@ footer .container-legal-notice{
 .modal{
   color: black;
 }
+@media  (max-width : 900px){
+  footer{
+    height: 280px;
+  }
+  .i-legal-notice{
+    display: inline-grid;
+  }
+  .legal-notice{
+    text-decoration: underline;
+    padding-bottom: 5px;
+  }
+  .language-container{
+    padding-top: 5px;
+  }
+}
 /* fin du footer */
-=======
-/* marge liste de liens*/
-
-#navbarSupportedContent{
-margin-left: 110px;
-}
-
-/* LOGO */
-
-#logo{
-  height: 40px;
-  width: 50px;
-}
-
-/* Nom du site */
-
-#name{
-  margin-left: 4vw;
-  margin-right: 3vw;
-  color: white;
-}
-
-/* espace entre les liens*/
-
-li{
-  justify-content: space-between;
-  padding-right: 30px;
-}
-
-.nav-item{
-  margin-left: 1.5vw;
-}
-
-/* effets sur les liens */
-
-.nav-link:hover{
-  background-color: #828a91;
-  text-decoration-color: white;
-}
->>>>>>> 1f66d972526021dbb1b6b79d8f2552023665d3fe
