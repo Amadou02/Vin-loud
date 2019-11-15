@@ -58,3 +58,12 @@ h1
   font-size: 20px;
   font-weight: bold;
   font-family: 'Yeon Sung', cursive;
+}
+#description
+{
+  color: #dadada;
+}
+#artist
+{
+  text-decoration: underline;
+}
