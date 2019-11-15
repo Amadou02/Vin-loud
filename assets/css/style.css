@@ -67,3 +67,99 @@ h1
 {
   text-decoration: underline;
 }
+nav{
+  background: #33353e;
+}
+.navbar-brand{
+  margin-left: 4vw;
+  margin-right: 3vw;
+  color: white;
+}
+/* Modal du Panier */
+.fa-shopping-basket{
+  background: #33353e;
+  font-size: 10    px;
+  color: white;
+}
+.fa-shopping-basket:hover{
+  opacity: 0.8;
+}
+.modal-price{
+  color: grey;
+  font-size: 14px;
+  float: right;
+}
+.modal-total-basket{
+  font-size: 15px;
+}
+.modal-icon-trash{
+  color: black;
+}
+.modal-icon-trash:hover{
+  color: #CF3A24;
+}
+#basket
+{
+  margin-left: 50%;
+}
+@media screen and (max-width: 640px) {
+  #basket
+  {
+    margin-left: 80%
+  }
+  .card
+  {
+    width: 100%;
+  }
+}
+/* Debut du footer */
+footer{
+  background: #33353e;
+  color: white;
+  height: 200px;
+}
+.language-container{
+  padding-left: 20px;
+}
+.follow-post{
+  font-size: 23px;
+}
+.copyright{
+  padding-right: 20px;
+}
+.icon{
+  color: white;
+  font-size: 40px;
+  padding:0 9px;
+  margin-bottom: 3%;
+  padding-top: 5px;
+}
+.icon:hover{
+  opacity: 0.8;
+}
+.legal-notice{
+  padding:0 7px;
+  color: white;
+}
+.legal-notice:hover{
+  color: #b9b9b9;
+}
+.modal{
+  color: black;
+}
+@media  (max-width : 900px){
+  footer{
+    height: 280px;
+  }
+  .i-legal-notice{
+    display: inline-grid;
+  }
+  .legal-notice{
+    text-decoration: underline;
+    padding-bottom: 5px;
+  }
+  .language-container{
+    padding-top: 5px;
+  }
+}
+/* fin du footer */

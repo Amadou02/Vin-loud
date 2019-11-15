@@ -39,6 +39,7 @@ $(document).ready(function(){
   // Ajouter au panier
   $('.shopping').on('click', function(){
     var ref = $(this).attr('id');
+    console.log(ref);
     alert('Article ajouté avec succés au panier');
   })
   // Filtrer
