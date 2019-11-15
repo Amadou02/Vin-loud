@@ -1,3 +1,42 @@
+/* marge liste de liens*/
+
+#navbarSupportedContent{
+margin-left: 110px;
+}
+
+/* LOGO */
+
+#logo{
+  height: 40px;
+  width: 50px;
+}
+
+/* Nom du site */
+
+#name{
+  margin-left: 4vw;
+  margin-right: 3vw;
+  color: white;
+}
+
+/* espace entre les liens*/
+
+li{
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.nav-item{
+  margin-left: 1.5vw;
+}
+
+/* effets sur les liens */
+
+.nav-link:hover{
+  background-color: #828a91;
+  text-decoration-color: white;
+}
+
 #cloningCard
 {
   background-color: #33353e;
@@ -19,4 +58,3 @@ h1
   font-size: 20px;
   font-weight: bold;
   font-family: 'Yeon Sung', cursive;
-}
