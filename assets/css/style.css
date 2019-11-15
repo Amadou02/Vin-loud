@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
@@ -6,6 +5,8 @@ body{
 /* début du header */
 nav{
   background: #33353e;
+}
+.basket-container{
 }
 #logo{
   height: 40px;
