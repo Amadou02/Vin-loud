@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
@@ -98,3 +99,27 @@ footer{
   }
 }
 /* fin du footer */
+=======
+#cloningCard
+{
+  background-color: #33353e;
+  color: white;
+  width: 25%;
+}
+.italic
+{
+  font-style: italic;
+  font-size: 15px;
+  margin-top: -10px;
+}
+img
+{
+  width: 50%;
+}
+h1
+{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Yeon Sung', cursive;
+}
+>>>>>>> af7045d485908736fd52bf2f386ad0ff56d1993f
