@@ -100,12 +100,12 @@ nav{
 }
 #basket
 {
-  margin-left: 50%;
+  margin-left: 20vh;
 }
 @media screen and (max-width: 640px) {
   #basket
   {
-    margin-left: 80%
+    margin-left: 35vh;
   }
   .card
   {
