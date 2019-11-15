@@ -48,6 +48,30 @@ nav{
 }
 /* Fin de modal */
 /* fin du header */
+/* Début du main */
+#cloningCard
+{
+  background-color: #33353e;
+  color: white;
+  width: 25%;
+}
+.italic
+{
+  font-style: italic;
+  font-size: 15px;
+  margin-top: -10px;
+}
+img
+{
+  width: 50%;
+}
+h1
+{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Yeon Sung', cursive;
+}
+/* Fin du main */
 /* Debut du footer */
 footer{
   background: #33353e;
@@ -99,27 +123,3 @@ footer{
   }
 }
 /* fin du footer */
-=======
-#cloningCard
-{
-  background-color: #33353e;
-  color: white;
-  width: 25%;
-}
-.italic
-{
-  font-style: italic;
-  font-size: 15px;
-  margin-top: -10px;
-}
-img
-{
-  width: 50%;
-}
-h1
-{
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Yeon Sung', cursive;
-}
->>>>>>> af7045d485908736fd52bf2f386ad0ff56d1993f
