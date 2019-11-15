@@ -100,16 +100,22 @@ nav{
 }
 #basket
 {
-  margin-left: 20vh;
+  margin-left: 0.7vh;
 }
 @media screen and (max-width: 640px) {
   #basket
   {
-    margin-left: 35vh;
+    margin-left: 0.1vh;
   }
   .card
   {
     width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  #basket
+  {
+    margin-right: 0.5vh;
   }
 }
 /* Debut du footer */
@@ -163,3 +169,7 @@ footer{
   }
 }
 /* fin du footer */
+body
+{
+  background-color: #D3D9DE;
+}

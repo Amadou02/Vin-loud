@@ -13,7 +13,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark text-center">
     <!-- Bouton responsive afficher les liens-->
     <div class="container justify-content-center">
-      <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse d-flex justify-content-center">
         <ul class="navbar-nav mr-auto text-center">
           <!-- LOGO -->
           <li>
@@ -36,8 +36,8 @@
             <a class="nav-link text-light" id="jazz" href="#">Jazz</a>
           </li>
         </ul>
+        <button id="basket" class="btn" data-toggle="modal" data-target="#shopping-basket"><i class="fas fa-shopping-basket">Panier</i></button>
       </div>
-      <button id="basket" class="btn" data-toggle="modal" data-target="#shopping-basket"><i class="fas fa-shopping-basket">Panier</i></button>
     </div>
   </nav>
   <!-- Modal -->
@@ -51,11 +51,11 @@
           </div>
         </div>
         <div class="modal-body">
-          <div class="container">
+          <div id="basketContainer">
             <!-- L'emplacement des articles -->
           </div>
           <div class="modal-trash d-flex justify-content-end">
-            <a href="#" ><i class="modal-icon-trash far fa-trash-alt"> Supprimer</i></a>
+            <a id="delete" href="#" ><i class="modal-icon-trash far fa-trash-alt"> Supprimer</i></a>
           </div>
         </div>
         <div class="modal-footer">

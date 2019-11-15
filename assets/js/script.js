@@ -42,7 +42,7 @@ $(document).ready(function(){
     console.log(ref);
     alert('Article ajouté avec succés au panier');
   })
-  // Filtrer
+  // Filtrer les choix
   $('.nav-item > a').on('click',function(){
     var getId = $(this).attr('id');
     console.log(getId);
@@ -52,4 +52,13 @@ $(document).ready(function(){
   $('#name').on('click',function(){
     $('.card').show();
   });
+  //Suppression des articles dans le Panier
+  $('#delete').on('click', function(){
+    $('#basketContainer').text('')
+  })
+  // Validation de la commande ---> Reload la page
+  $('#modal-purchase').on('click', function(){
+    alert('Merci de votre achat !');
+    location.reload();
+  })
 })
