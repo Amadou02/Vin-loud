@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   margin: 0;
   padding: 0;
@@ -60,3 +61,43 @@ footer .container-legal-notice{
   color: black;
 }
 /* fin du footer */
+=======
+/* marge liste de liens*/
+
+#navbarSupportedContent{
+margin-left: 110px;
+}
+
+/* LOGO */
+
+#logo{
+  height: 40px;
+  width: 50px;
+}
+
+/* Nom du site */
+
+#name{
+  margin-left: 4vw;
+  margin-right: 3vw;
+  color: white;
+}
+
+/* espace entre les liens*/
+
+li{
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.nav-item{
+  margin-left: 1.5vw;
+}
+
+/* effets sur les liens */
+
+.nav-link:hover{
+  background-color: #828a91;
+  text-decoration-color: white;
+}
+>>>>>>> 1f66d972526021dbb1b6b79d8f2552023665d3fe
