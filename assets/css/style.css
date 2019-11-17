@@ -19,6 +19,10 @@ margin-left: 110px;
   color: white;
 }
 
+#delete:hover{
+  background-color: #828a91;
+}
+
 /* espace entre les liens*/
 
 li{
