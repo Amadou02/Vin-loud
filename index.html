@@ -47,12 +47,30 @@
         <div class="modal-header">
           <div class="container-fluid">
             <h5 class="modal-title" id="exampleModalLongTitle">Votre panier</h5>
-            <span class="modal-price">Prix :</span>
           </div>
         </div>
         <div class="modal-body">
           <div id="basketContainer">
-            <!-- L'emplacement des articles -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ref</th>
+                  <th>Article</th>
+                  <th>Quantité</th>
+                  <th>Prix</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="cart-tablebody">
+                <tr id="trArticle">
+                  <td id="refArticle"></td>
+                  <td id="titleArticle"></td>
+                  <td id="quantityArticle"></td>
+                  <td id="priceArticle"></td>
+                  <td><a class="deleteOneElement" href="#">Supprimer</i></a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="modal-trash d-flex justify-content-end">
             <a id="delete" href="#" ><i class="modal-icon-trash far fa-trash-alt"> Supprimer</i></a>
@@ -78,12 +96,23 @@
       <div class="card text-center m-4 electronic" id="cloningCard">
         <div class="card-body">
           <img src="assets/img/Electronic/AzzidoDaBass/Avant.jpg" alt="Face Avant vinyle">
-          <h1 class="card-title">Dooms night</h1>
-          <p id="artist" class="italic">Azzido Da Bass</p>
-          <p id="description">Single sorti en 1999 en Allemagne sous le label Club Tools, 2 titres.</p>
-          <p class="mt-3"> <span id="price">20</span>€</p>
+          <h1 class="card-title"></h1>
+          <p id="artist" class="italic"></p>
+          <p id="description"></p>
+          <p class="mt-3"> <span id="price"></span>€</p>
           <button type="button" id="001" class="btn btn-info shopping">Ajouter au panier</button>
-          <p class="ml-5 mt-3" id="modifiedNumber">1</p>
+          <label for="q">Quantité: </label>
+          <select id="qt" name="q">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
         </div>
       </div>
     </div>

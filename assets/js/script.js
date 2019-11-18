@@ -24,8 +24,11 @@ $(document).ready(function(){
   ];
   var totalPrice = 0;
   console.log(article);
+  $('#trArticle').hide();
+  $('#cloningCard').hide()
+
   // Duplication de card et ajout des genres
-  for (var i = 1; i < article.length; i++) {
+  for (var i = 0; i < article.length; i++) {
     var cloning = $('#cloningCard').clone();
     cloning.removeClass('electronic');
     cloning.appendTo('.row');
@@ -36,6 +39,7 @@ $(document).ready(function(){
     cloning.addClass(article[i][4]);
     cloning.find('.shopping').attr('id', article[i][6]);
     cloning.find('#description').text(article[i][5]);
+    cloning.show();
   }
   // Augmenter la quantitée
   $('#positiv').on('click', function(){
@@ -59,16 +63,28 @@ $(document).ready(function(){
   })
   // Ajouter au panier
   $('.shopping').on('click', function(){
+    // Recuperation des infos
     var albumTitle = $(this).parent('.card-body').find('h1').text();
-    var numberAdd = $('#modifiedNumber').text();
+    var numberAdd = $(this).parent('.card-body').find('#qt').val();
     var price = $(this).parent('.card-body').find('#price').text();
-    var finalPrice = parseInt(numberAdd) * parseInt(price);
+    var ref = $(this).attr('id');
     var totalQuantity = parseInt($('#modal-quantity').text()) + parseInt(numberAdd);
+    // Calcul qt * prix
+    var finalPrice = parseInt(numberAdd) * parseInt(price);
+    // Ajout d'article au panier
+    var cloningBasket = $('#trArticle').clone();
+    cloningBasket.appendTo('#cart-tablebody');
+    cloningBasket.find('#refArticle').text(ref)
+    cloningBasket.find('#titleArticle').text(albumTitle)
+    cloningBasket.find('#quantityArticle').text(numberAdd)
+    cloningBasket.find('#priceArticle').text(finalPrice + '€')
+    cloningBasket.show();
+    // Affichage prix total et quantité total
     totalPrice += finalPrice;
     $('#modal-quantity').text(totalQuantity);
     $('#modal-total').text(totalPrice);
-    $(`<p>${albumTitle} x ${numberAdd} = ${finalPrice}€</p>`).appendTo('#basketContainer');
-  })
+    $('#modal-total').text();
+  });
 
   // Filtrer les choix
   $('.nav-item > a').on('click',function(){
@@ -80,25 +96,31 @@ $(document).ready(function(){
   $('#name').on('click',function(){
     $('.card').show();
   });
+  // Suppression d'un article au panier
+  $('body').on('click', '.deleteOneElement', function (event) {
+    $(this).closest('tr').remove();
+    console.log('test');
+  });
   //Suppression des articles dans le Panier
   $('#delete').on('click', function(){
-    if ($('#basketContainer').text().length  == 24) {
-      return alert('le panier est vide')
+    if ($('#basketContainer').text().length  == 386) {
+      return alert('Il n\'y a rien à supprimer');
     }
     else {
-      $('#basketContainer').text('')
+      $('#basketContainer').html(`<table class="table"><thead><tr><th>ref</th><th>Article</th><th>Quantité</th><th>Prix</th></tr><th></th></thead><tbody id="cart-tablebody"><tr id="trArticle"><td id="refArticle"></td><td id="titleArticle"></td><td id="quantityArticle"></td><td id="priceArticle"></td><td><a id="deleteOneElement" href="">Supprimer</i></a></td></tr></tbody></table>`);
       $('#modal-quantity').text('0');
       $('#modal-total').text('0');
+      $('#trArticle').hide();
     }
-  })
+  });
   // Validation de la commande ---> Reload la page
   $('#modal-purchase').on('click', function(){
-    if ($('#basketContainer').text().length  == 24) {
-      return alert('le panier est vide')
+    if ($('#basketContainer').text().length  == 386) {
+      return alert('Le panier est vide')
     }
     else {
       alert('Merci de votre achat !');
       location.reload();
     }
-  })
+  });
 })
