@@ -22,6 +22,7 @@ $(document).ready(function(){
     ['Intensity', 'The Bambi Molesters', 7, 'assets/img/Rock/TheBambiMolesters/Avant.jpg', 'rock', 'LP sorti en 2009 en Croatie sous le label Dancing Bear', '019' ],
     ['One Of Us Is The Killer', 'The Dillinger Escape Plan', 9, 'assets/img/Rock/TheDillingerEscapePlan/Avant.jpg', 'rock', 'LP sorti en 2013 aux U.S sous le label Sumerian Records, 11 Titres', '020' ],
   ];
+  var totalPrice = 0;
   console.log(article);
   // Duplication de card et ajout des genres
   for (var i = 1; i < article.length; i++) {
@@ -36,12 +37,39 @@ $(document).ready(function(){
     cloning.find('.shopping').attr('id', article[i][6]);
     cloning.find('#description').text(article[i][5]);
   }
+  // Augmenter la quantitée
+  $('#positiv').on('click', function(){
+    var modifiedNumber = parseInt($('#modifiedNumber').text()) + 1;
+    if ($('#modifiedNumber').text() < 9) {
+      $('#modifiedNumber').text(modifiedNumber);
+    }
+    else {
+      return false;
+    }
+  })
+  // Diminuer la quantitée
+  $('#negativ').on('click', function(){
+    var modifiedNumber = parseInt($('#modifiedNumber').text()) - 1;
+    if ($('#modifiedNumber').text() > 0 ) {
+      $('#modifiedNumber').text(modifiedNumber);
+    }
+    else {
+      return false;
+    }
+  })
   // Ajouter au panier
   $('.shopping').on('click', function(){
-    var ref = $(this).attr('id');
-    console.log(ref);
-    alert('Article ajouté avec succés au panier');
+    var albumTitle = $(this).parent('.card-body').find('h1').text();
+    var numberAdd = $('#modifiedNumber').text();
+    var price = $(this).parent('.card-body').find('#price').text();
+    var finalPrice = parseInt(numberAdd) * parseInt(price);
+    var totalQuantity = parseInt($('#modal-quantity').text()) + parseInt(numberAdd);
+    totalPrice += finalPrice;
+    $('#modal-quantity').text(totalQuantity);
+    $('#modal-total').text(totalPrice);
+    $(`<p>${albumTitle} x ${numberAdd} = ${finalPrice}€</p>`).appendTo('#basketContainer');
   })
+
   // Filtrer les choix
   $('.nav-item > a').on('click',function(){
     var getId = $(this).attr('id');
@@ -54,11 +82,23 @@ $(document).ready(function(){
   });
   //Suppression des articles dans le Panier
   $('#delete').on('click', function(){
-    $('#basketContainer').text('')
+    if ($('#basketContainer').text().length  == 24) {
+      return alert('le panier est vide')
+    }
+    else {
+      $('#basketContainer').text('')
+      $('#modal-quantity').text('0');
+      $('#modal-total').text('0');
+    }
   })
   // Validation de la commande ---> Reload la page
   $('#modal-purchase').on('click', function(){
-    alert('Merci de votre achat !');
-    location.reload();
+    if ($('#basketContainer').text().length  == 24) {
+      return alert('le panier est vide')
+    }
+    else {
+      alert('Merci de votre achat !');
+      location.reload();
+    }
   })
 })
