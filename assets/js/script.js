@@ -25,8 +25,7 @@ $(document).ready(function(){
   var totalPrice = 0;
   console.log(article);
   $('#trArticle').hide();
-  $('#cloningCard').hide()
-
+  $('#cloningCard').hide();
   // Duplication de card et ajout des genres
   for (var i = 0; i < article.length; i++) {
     var cloning = $('#cloningCard').clone();
@@ -85,7 +84,6 @@ $(document).ready(function(){
     $('#modal-total').text(totalPrice);
     $('#modal-total').text();
   });
-
   // Filtrer les choix
   $('.nav-item > a').on('click',function(){
     var getId = $(this).attr('id');
